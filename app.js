@@ -36,13 +36,14 @@ const typeDefs = gql`
   }
 `;
 
-const WEATHER_API = `https://api.openweathermap.org/data/2.5/weather?appid=081dc4d92a2d6143ac8bda11d807f49c`;
+const WEATHER_API = `https://api.openweathermap.org/data/2.5/weather?appid=081dc4d92a2d6143ac8bda11d807f49c&lang=sv`;
 
 const resolvers = {
   Query: {
-    getCityByName: async (obj, args, context, info) => {
-      const { name, country, config } = args;
+    getCityByName: async (_obj, args) => {
+      const { name, country } = args;
       let url = `${WEATHER_API}&q=${name}&units=metric`;
+
       try {
         const { data } = await axios.get(url);
         if (country && country.toUpperCase() !== data.sys.country) {
@@ -72,7 +73,7 @@ const resolvers = {
           },
         };
       } catch (e) {
-        return null;
+        return alert(e);
       }
     },
   },
