@@ -1,0 +1,27 @@
+{
+  "name": "29-weather-arbetsprov",
+  "version": "1.0.0",
+  "description": "29k arbetsprov",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaesPhilip/29-weather-arbetsprov.git"
+  },
+  "author": "Philip Löfgren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaesPhilip/29-weather-arbetsprov/issues"
+  },
+  "homepage": "https://github.com/ClaesPhilip/29-weather-arbetsprov#readme",
+  "dependencies": {
+    "apollo-server": "^2.24.0",
+    "axios": "^0.21.1",
+    "graphql": "^15.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
