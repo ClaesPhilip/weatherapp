@@ -2,7 +2,7 @@
   "name": "29-weather-arbetsprov",
   "version": "1.0.0",
   "description": "29k arbetsprov",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon app.js"
   },
