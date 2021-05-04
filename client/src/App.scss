@@ -3,33 +3,36 @@ $color-dark: rgb(70, 63, 63);
 $textColor: #a8a8a8;
 $color-white: rgb(255, 255, 255);
 
-.App {
-  text-align: center;
-  color: black
-}
+//QUERIES
+$mobile: 340px;
 
-.search-box {
+//SEARCH-BAR
+.search-container {
   margin: 10px 0 50px;
   display: flex;
   justify-content: center;
-}
 
-.search-box .search-bar {
-  min-width: 300px;
-  padding: 10px;
-  background: none;
-  border: none;
-  outline: none;
-  border-radius: 0px 0px 16px 16px;
-  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
-  color: #a8a8a8;
-  font-size: 20px;
+  .search-bar {
+    min-width: 300px;
+    padding: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 0px 0px 16px 16px;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+    color: #a8a8a8;
+    font-size: 20px;
+    @media only screen and (max-width: $mobile) {
+      min-width: 250px;
+    }
+  }
 }
 
 .input .search-bar {
   color: black;
 }
 
+//ERROR HANDLER
 .error-container {
   height: 100vh;
   display: flex;
@@ -49,6 +52,7 @@ $color-white: rgb(255, 255, 255);
   }
 }
 
+//CARD
 .container {
   display: flex;
   justify-content: center;
@@ -57,12 +61,24 @@ $color-white: rgb(255, 255, 255);
   height: 100vh;
   background-color: rgb(32, 31, 31);
 
+  .logo {
+    width: 100px;
+    height: 100px;
+    @media only screen and (max-width: $mobile) {
+      display: none;
+    } 
+  }
+
   .card-cold {
     background-color: rgb(61, 140, 172);
     transition: 0.4 ease;
     min-width: 280px;
     min-height: 380px;
     border-radius: 10px;
+    @media only screen and (max-width: $mobile) {
+      height: 200px;
+      min-width: 250px;
+    }
   }
   
   .card-warm {
@@ -71,6 +87,10 @@ $color-white: rgb(255, 255, 255);
     min-width: 280px;
     min-height: 380px;
     border-radius: 10px;
+    @media only screen and (max-width: $mobile) {
+      height: 200px;
+      min-width: 250px;
+    }
   }
 
   .cardDetails {
@@ -88,6 +108,7 @@ $color-white: rgb(255, 255, 255);
         opacity: 80%;
         text-align: center;
         margin-left: 13px;
+        margin-bottom: 5px;
       }
 
       .condition {
@@ -147,5 +168,16 @@ $color-white: rgb(255, 255, 255);
     }
   }
 }
+
+  // @media screen and (max-width: $mobile) {
+  //   .card-cold {
+  //     height: 80px;
+  //     width: 80px;
+  //   }
+  //   .card-warm {
+  //     height: 80px;
+  //     width: 80px;
+  //   }
+  // }
 
 
