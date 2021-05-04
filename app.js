@@ -74,8 +74,8 @@ const resolvers = {
             },
           },
         };
-      } catch (e) {
-        return e;
+      } catch (err) {
+        return err;
       }
     },
   },
