@@ -76,7 +76,7 @@ function App() {
     )
   }
 
-  // QUERY IF-STATEMENTS
+  // QUERY VARIABLES
   const sunOrRainImage = data.getCity.weather.temperature.actual > 16 ? Sun : Rain;
   const coldOrWarmLogo = data.getCity.weather.temperature.actual > 16 ? KYellow : KBlue;
   const temperature = Math.round(data.getCity.weather.temperature.actual);
