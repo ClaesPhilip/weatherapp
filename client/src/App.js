@@ -48,7 +48,7 @@ function App() {
       </button>
     </div>
   );
-  if (loading) return <h4 className="error-message">Loading...</h4>;
+  if (loading) return <h4 className="loading">Loading...</h4>;
 
   // SEARCH-HANDLER
   const onSearch = evt => {
