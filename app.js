@@ -1,6 +1,7 @@
 const axios = require("axios");
 const { UserInputError, ApolloServer, gql } = require("apollo-server");
 
+//TYPE DEFINITIONS
 const typeDefs = gql`
   type City {
     name: String
@@ -29,18 +30,20 @@ const typeDefs = gql`
     units: Unit
   }
   type Query {
-    getCityByName(name: String!, country: String, config: ConfigInput): City
+    getCity(name: String!, country: String, config: ConfigInput): City
   }
   enum Unit {
     metric
   }
 `;
 
+// API & KEY
 const WEATHER_API = `https://api.openweathermap.org/data/2.5/weather?appid=081dc4d92a2d6143ac8bda11d807f49c&lang=sv`;
 
+// RESOLVERS
 const resolvers = {
   Query: {
-    getCityByName: async (_obj, args) => {
+    getCity: async (_obj, args) => {
       const { name, country } = args;
       let url = `${WEATHER_API}&q=${name}&units=metric`;
 
@@ -59,7 +62,6 @@ const resolvers = {
           weather: {
             summary: {
               title: data.weather[0].main,
-              description: data.weather[0].description,
             },
             temperature: {
               actual: data.main.temp,
@@ -73,7 +75,7 @@ const resolvers = {
           },
         };
       } catch (e) {
-        return alert(e);
+        return e;
       }
     },
   },
