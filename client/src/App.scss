@@ -20,7 +20,7 @@ $mobile: 340px;
     outline: none;
     border-radius: 0px 0px 16px 16px;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
-    color: #a8a8a8;
+    color: $textColor;
     font-size: 20px;
     @media only screen and (max-width: $mobile) {
       min-width: 250px;
@@ -30,6 +30,11 @@ $mobile: 340px;
 
 .input .search-bar {
   color: black;
+}
+
+.loading {
+  text-align: center; 
+  color: $color-white;
 }
 
 //ERROR HANDLER
