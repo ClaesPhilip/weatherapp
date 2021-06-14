@@ -3,7 +3,7 @@
 This is a project I made to learn more about graphql. 
 
 It´s a pretty basic app where you can search on a city and get the weather status. The information gets rendered in a card with local time, temperature, wind, and how cloudy 
-it is right now that gets rendered as a svg (rain, cloudy, sunny).
+it is right now, which gets rendered as a svg (rain, cloudy, sunny).
 
 If you want to check it out just follow these steps:
 
